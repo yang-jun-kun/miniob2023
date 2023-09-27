@@ -44,6 +44,7 @@ RC ExecuteStage::handle_request(SQLStageEvent *sql_event)
   Stmt *stmt = sql_event->stmt();
   if (stmt != nullptr) {
     CommandExecutor command_executor;
+    cout << "test" <<endl;
     rc = command_executor.execute(sql_event);
     session_event->sql_result()->set_return_code(rc);
   } else {
